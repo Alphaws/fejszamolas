@@ -1,0 +1,7 @@
+{
+  "name": "fejszamolas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
