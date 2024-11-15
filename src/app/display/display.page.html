@@ -1,13 +1,24 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Display</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Mental Arithmetic</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="restart()">Restart</ion-button>
+            <ion-button (click)="back()">Back</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Display</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<div class="container" *ngIf="!ready">
+    <h1 *ngIf="currentNumber !== null">+{{ currentNumber }}</h1>
+    <h2 *ngIf="currentNumber === null ">...</h2>
+    <h2>{{ currentIndex + 1 }}/{{ numberCount }}</h2>
+</div>
+
+<div class="container" *ngIf="ready">
+    Ready ?
+    <ion-input [ngClass]="userAnswer" autofocus="autofocus"></ion-input>
+</div>
+
+<div *ngIf="ready">
+    {{ numbers | json }}
+</div>

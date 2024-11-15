@@ -1,20 +1,48 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Mental Arithmetic</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="openUserMenu($event)">
+                <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
+                <ion-label>Guest User</ion-label>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Blank</ion-title>
+            <ion-buttons slot="end">
+                <ion-button (click)="openUserMenu($event)">
+                    <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
+                    <ion-label>Guest User</ion-label>
+                </ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+    <div id="container">
+        <ion-item>
+            <ion-label style="width: 50%">Number of Numbers</ion-label>
+            <ion-input type="number" [(ngModel)]="numberCount"></ion-input>
+        </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+        <ion-item>
+            <ion-label>Display Time (seconds)</ion-label>
+            <ion-input type="number" [(ngModel)]="displayTime"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Digit Length</ion-label>
+            <ion-input type="number" [(ngModel)]="digitLength"></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" (click)="startGame()">Start</ion-button>
+
+
+        <strong>Ready to create an app?</strong>
+        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer"
+                               href="https://ionicframework.com/docs/components">UI Components</a></p>
+    </div>
 </ion-content>

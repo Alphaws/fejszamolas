@@ -1,3 +1,16 @@
+ion-item {
+  padding: 6px;
+}
+
+ion-input {
+  color: black;
+  font-size: 2em;
+  border: 1px solid #7171a1 !important;
+  --background: rgb(119, 119, 179) !important;
+  max-width: 50vw; // this is applying perfectly
+  max-height: 10vh;
+}
+
 #container {
   text-align: center;
 
